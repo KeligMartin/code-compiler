@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./postgres-data:/var/lib/postgresql
+    restart: always
+    environment:
+      POSTGRES_USER: advent
+      POSTGRES_PASSWORD: advent
+      POSTGRES_DB: advent
+    ports:
+    - 5432:5432
+
+volumes:
+  data: {}
